@@ -1,6 +1,6 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = "build" # <-- Change this to your correct build folder (e.g., "build" for React)
+  command = "npm install --force && npm run build"
+  publish = "build"  # or "dist" if that's your build folder
 
 [build.environment]
   NODE_VERSION = "18"
