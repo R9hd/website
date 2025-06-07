@@ -106,7 +106,9 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                 />
             </div>
 
-            <div className="space-y-2" data-aos="fade-up" data-aos-duration="1400">
+            {/* DUE TO THE STORAGE SERVICE BEING PAID NOW IN FIREBASE, THIS PFP UPLOAD WILL BE DISABLE */}
+
+            {/* <div className="space-y-2" data-aos="fade-up" data-aos-duration="1400">
                 <label className="block text-sm font-medium text-white">
                     Profile Photo <span className="text-gray-400">(optional)</span>
                 </label>
@@ -154,7 +156,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                         </div>
                     )}
                 </div>
-            </div>
+            </div> */}
 
             <button
                 type="submit"
@@ -219,7 +221,9 @@ const Komentar = () => {
         setIsSubmitting(true);
         
         try {
-            const profileImageUrl = await uploadImage(imageFile);
+            const profileImageUrl = null; // Due to the storage paid service new policy in firebase, pfp feature will be disabled 
+
+            // await uploadImage(imageFile);
             await addDoc(collection(db, 'portfolio-comments'), {
                 content: newComment,
                 userName,
