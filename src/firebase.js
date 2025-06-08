@@ -3,6 +3,10 @@ import { getFirestore } from "firebase/firestore"
 import { collection, addDoc, getDocs } from "@firebase/firestore"; 
 
 
+
+console.log("🔥 Firebase initialized");
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,

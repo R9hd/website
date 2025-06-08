@@ -5,7 +5,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 
-console.log("Home component rendered");
+console.log("🏠 Home component rendered");
+
 
 // Memoized Components
 const StatusBadge = memo(() => (

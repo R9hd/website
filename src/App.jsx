@@ -12,6 +12,9 @@ import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
+  
+    console.log("🔵 LandingPage mounted");
+
   return (
     <>
       <AnimatePresence mode="wait">

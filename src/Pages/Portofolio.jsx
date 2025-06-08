@@ -16,6 +16,12 @@ import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
 
+
+
+console.log("📂 Portfolio component rendered");
+
+
+
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({ onClick, isShowingMore }) => (
   <button
@@ -132,7 +138,7 @@ export default function FullWidthTabs() {
 
   const fetchData = useCallback(async () => {
     try {
-      
+
       const projectCollection = collection(db, "projects");
       const certificateCollection = collection(db, "certificates");
 

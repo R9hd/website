@@ -3,6 +3,11 @@ import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+
+console.log("📘 About component rendered");
+
+
+
 // Memoized Components
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
