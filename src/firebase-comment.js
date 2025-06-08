@@ -4,13 +4,14 @@ import { getStorage } from "firebase/storage";
 import { collection, addDoc } from "@firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCNR5Y2tprs6wR1fYzzFYEksymKTCxs_Ig",
-  authDomain: "websitedb-4ffa8.firebaseapp.com",
-  projectId: "websitedb-4ffa8",
-  storageBucket: "websitedb-4ffa8.firebasestorage.app",
-  messagingSenderId: "283795392137",
-  appId: "1:283795392137:web:ec442468039e7bf3c56858"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
+
 
 const app = initializeApp(firebaseConfig, 'comments-app');
 const db = getFirestore(app);
