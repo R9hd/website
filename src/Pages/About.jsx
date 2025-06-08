@@ -112,9 +112,7 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
   </div>
 ));
 
-if (projects.length === 0) {
-  return <div className="text-white text-center">No projects loaded</div>;
-}
+
 
 
 const AboutPage = () => {

@@ -132,12 +132,7 @@ export default function FullWidthTabs() {
 
   const fetchData = useCallback(async () => {
     try {
-
-if (projects.length === 0) {
-  return <div className="text-white text-center">No projects loaded</div>;
-}
-
-
+      
       const projectCollection = collection(db, "projects");
       const certificateCollection = collection(db, "certificates");
 
