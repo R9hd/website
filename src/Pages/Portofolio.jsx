@@ -139,10 +139,6 @@ if (projects.length === 0) {
 
 
       const projectCollection = collection(db, "projects");
-
-return <div className="text-white text-center">About works</div>;
-
-
       const certificateCollection = collection(db, "certificates");
 
       const [projectSnapshot, certificateSnapshot] = await Promise.all([

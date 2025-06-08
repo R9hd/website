@@ -117,9 +117,6 @@ if (projects.length === 0) {
 }
 
 
-return <div className="text-white text-center">About works</div>;
-
-
 const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
