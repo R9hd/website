@@ -112,10 +112,21 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
   </div>
 ));
 
+if (projects.length === 0) {
+  return <div className="text-white text-center">No projects loaded</div>;
+}
+
+
+return <div className="text-white text-center">About works</div>;
+
+
 const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
+
+
+    
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
     const startDate = new Date("2023-11-06");

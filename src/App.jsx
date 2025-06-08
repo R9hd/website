@@ -24,6 +24,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
         <>
           <Navbar />
           <AnimatedBackground />
+          console.log("LandingPage mounted");
           <Home />
           <About />
           <Portofolio />
