@@ -12,7 +12,7 @@ import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
-  
+
     console.log("🔵 LandingPage mounted");
 
   return (
@@ -27,7 +27,6 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
         <>
           <Navbar />
           <AnimatedBackground />
-          console.log("LandingPage mounted");
           <Home />
           <About />
           <Portofolio />
