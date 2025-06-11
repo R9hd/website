@@ -180,6 +180,7 @@ const Certificate = ({ ImgSertif }) => {
 					<img
 						src={ImgSertif}
 						alt="Certificate Full View"
+						referrerPolicy="no-referrer"
 						style={{
 							display: "block",
 							maxWidth: "100%",
