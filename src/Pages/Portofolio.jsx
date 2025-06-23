@@ -119,7 +119,7 @@ const techStacks = [
   { icon: "vercel.svg", language: "Vercel" },
 ];
 
-export default function FullWidthTabs() {
+export default function Portofolio() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
   const [projects, setProjects] = useState([]);

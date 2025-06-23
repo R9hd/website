@@ -116,16 +116,34 @@ const ProjectDetails = () => {
     }
   }, [id]);
 
+  // if (!project) {
+  //   return (
+  //     <div className="min-h-screen bg-[#030014] flex items-center justify-center">
+  //       <div className="text-center space-y-6 animate-fadeIn">
+  //         <div className="w-16 h-16 md:w-24 md:h-24 mx-auto border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
+  //         <h2 className="text-xl md:text-3xl font-bold text-white">Loading Project...</h2>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
   if (!project) {
-    return (
-      <div className="min-h-screen bg-[#030014] flex items-center justify-center">
-        <div className="text-center space-y-6 animate-fadeIn">
-          <div className="w-16 h-16 md:w-24 md:h-24 mx-auto border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
-          <h2 className="text-xl md:text-3xl font-bold text-white">Loading Project...</h2>
-        </div>
+  return (
+    <div className="min-h-screen bg-[#030014] flex items-center justify-center px-6 text-center">
+      <div className="space-y-6 animate-fadeIn">
+        <h2 className="text-xl md:text-3xl font-bold text-white">Project not found</h2>
+        <p className="text-gray-400">The project you're looking for doesn't exist or was removed.</p>
+        <button
+          onClick={() => navigate(-1)}
+          className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white"
+        >
+          Go Back
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <div className="min-h-screen bg-[#030014] px-[2%] sm:px-0 relative overflow-hidden">

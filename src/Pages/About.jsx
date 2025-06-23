@@ -123,11 +123,25 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
 
+    // const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
+    // const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
 
-    
-    const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
+    let storedProjects = [];
+let storedCertificates = [];
+
+try {
+  storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+} catch (e) {
+  storedProjects = [];
+}
+
+try {
+  storedCertificates = JSON.parse(localStorage.getItem("certificates")) || [];
+} catch (e) {
+  storedCertificates = [];
+}
+
     
     const startDate = new Date("2023-11-06");
     const today = new Date();
@@ -232,7 +246,7 @@ const AboutPage = () => {
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/1ywpHYm1Q3_4VQ01iczaOWL1hCyxy8lOU/view?usp=sharing" className="w-full lg:w-auto">
+              <a href="https://drive.google.com/file/d/1W1IrON_iM0m415KbrIZSimp1kgJDDBN2/view?usp=sharing" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
